@@ -1,4 +1,4 @@
-package com.velocity.quiz;
+package com.quiz;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

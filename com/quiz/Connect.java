@@ -1,9 +1,9 @@
-package com.velocity.quiz;
+package com.quiz;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class ConnectionTest {              // to establish the connection with mysql
+public class Connect {              // to establish the connection with mysql
 	Connection connection = null;
 
 	//nice use of utility method here

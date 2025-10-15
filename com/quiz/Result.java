@@ -1,38 +1,33 @@
-package com.velocity.quiz;
+package com.quiz;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Result extends Student{                                   // extends student
+public class Result extends Student{
 	
-	static int score=0;                                                // variable to store score of student
+	static int score=0;
 	
 	public void getResult() throws SQLException {
-		MapDemo mapDemo = new MapDemo();                               // creating object to call method from MapDemo class
-		Set<String> set = mapDemo.getQuiz().keySet();                  // calling method
+		MapDemo mapDemo = new MapDemo();
+		Set<String> set = mapDemo.getQuiz().keySet();
 
 		Iterator<String> itr = set.iterator();                         
-		System.out.println("Read the following questions carefully and Enter the answer from four options 'a','b','c','d'.");  // message to display on console
-		while (itr.hasNext()) {                                        // returns true if there is another element to read 
+		System.out.println("Read the following questions carefully and Enter the answer from four options 'a','b','c','d'.");
+		while (itr.hasNext()) {
 			String str = itr.next();
-			Map<String, String> map = mapDemo.getQuiz();               // calling method
+			Map<String, String> map = mapDemo.getQuiz();
 			System.out.println();
 			str= str.replace("\r","\n");
 			System.out.println("Q" + str);
 			str= str.replace("\n","\r");
-			String str1 = map.get(str);                                // display question and options
+			String str1 = map.get(str);
 			System.out.println("Enter your Answer >> ");
-			Scanner scanner = new Scanner(System.in);                  // to take input from user
-			String str2 = scanner.next();                              // store answer from user into variable
-			if(str1.equals(str2)) {                                    // compare answer with value of corresponding key
+			Scanner scanner = new Scanner(System.in);
+			String str2 = scanner.next();
+			if(str1.equals(str2)) {
 				 score++;                                              // if true then increase by 1
 			}
 		}	

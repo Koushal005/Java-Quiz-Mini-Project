@@ -1,4 +1,4 @@
-package com.velocity.quiz;
+package com.quiz;
 
 import java.sql.*;
 import java.util.HashMap;
@@ -14,7 +14,7 @@ public class MapDemo {
 		Map<String, String> map = new HashMap<String, String>();        // creating hashmap object
 		try {
 
-			ConnectionTest connectionTest = new ConnectionTest();
+			Connect connectionTest = new Connect();
 			connection = connectionTest.getConnectionDetails();          // calling getconnection method
 
 			preparedStatement = connection.prepareStatement("select questions,ans from java_quiz");   // select query

@@ -1,11 +1,9 @@
-package com.velocity.quiz;
+package com.quiz;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class DisplayResult {
 	int a;
@@ -21,7 +19,7 @@ public class DisplayResult {
 	
 		try {
 
-			ConnectionTest connectionTest = new ConnectionTest();
+			Connect connectionTest = new Connect();
 			connection = connectionTest.getConnectionDetails();
 
 			preparedStatement = connection.prepareStatement("select * from student order by student_id");  // select student id,name,score from database

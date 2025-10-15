@@ -1,4 +1,4 @@
-package com.velocity.quiz;
+package com.quiz;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,7 +12,7 @@ public class InsertData {
 
 		try {
 
-			ConnectionTest connectionTest = new ConnectionTest();
+			Connect connectionTest = new Connect();
 			connection = connectionTest.getConnectionDetails();
 
 			preparedStatement = connection.prepareStatement("insert into student(student_id,name)values(?,?)");
