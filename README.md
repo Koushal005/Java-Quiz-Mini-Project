@@ -1,4 +1,4 @@
-# Java Quiz Mini Project
+# Java Quiz Application
 
 A simple console-based Quiz Application developed using Core Java, Hibernate, and MySQL. This project was built to understand Java fundamentals, object-oriented programming, database integration, and CRUD operations.
 
